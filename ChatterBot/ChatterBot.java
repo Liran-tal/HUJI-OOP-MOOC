@@ -2,11 +2,13 @@ import java.util.Random;
 
 class ChatterBot {
     static final String REQUEST_PREFIX = "say ";
-
-    Random rand = new Random();
+    
     String[] repliesToIllegalRequest;
-
-    ChatterBot(String[] repliesToIllegalRequest) {
+    Random rand = new Random();
+    String name;
+    
+    ChatterBot(String name, String[] repliesToIllegalRequest) {
+        this.name = name;
         this.repliesToIllegalRequest = new String[repliesToIllegalRequest.length];
         
         for(int i = 0 ; i < repliesToIllegalRequest.length ; i = i+1) {
@@ -29,5 +31,9 @@ class ChatterBot {
             reply = reply + statement;
         }
         return reply;
+    }
+
+    String getName () {
+        return this.name;
     }
 }
