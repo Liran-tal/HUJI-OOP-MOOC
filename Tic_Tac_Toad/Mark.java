@@ -1,4 +1,4 @@
-// enum Mark {
+// public enum Mark {
 //   BLANK,
 //   X,
 //   O  
